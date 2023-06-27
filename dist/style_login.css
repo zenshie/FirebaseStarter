@@ -11,7 +11,7 @@ body{
 
 .loginbox {
     width: 298px;
-    height: 400px;
+    height: 500px;
     background: rgba(0, 77, 90, 0.795);
     color: #fff;
     top: 50%;
@@ -21,21 +21,6 @@ body{
     box-sizing: border-box;
     padding: 70px 35px;
     border-radius: 30px;
-}
-
-.loginbox:hover {
-    width: 300px;
-    height: 402px;
-    background: rgba(0, 64, 75, 0.822);
-    color: #fff;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-    border-radius: 30px;
-
 }
 
 .avatar{
@@ -55,9 +40,10 @@ h1{
 }
 
 .loginbox p{
-    margin: 0;
+    margin-top: 15%;
     padding: 0;
     font-weight: bold;
+    text-align: center;
 }
 
 .loginbox input{
@@ -87,7 +73,7 @@ h1{
     font-size: 16px ;
 }
 
-.loginbox input[type="submit"]
+.loginbox #login
 {
     border: none;
     outline: none;
@@ -97,22 +83,44 @@ h1{
     font-size: 18px;
     border-radius: 20px;
     margin-top: 8%;
+    padding: 5px 95px;
 }
 
-.loginbox input[type="submit"]:hover
+.loginbox #loginGmail{
+    border: none;
+    outline: none;
+    height: 40 px;
+    background: #d18800;
+    color: #fff;
+    font-size: 17.5px;
+    border-radius: 20px;
+    margin-top: 8%;
+    margin-left: 3%;
+    padding: 5px 45px;
+}
+
+.loginbox #login:hover
 {
     cursor: pointer;
     background: #ffc107;
     color: #000;
 }
+
+.loginbox #loginGmail:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
 .loginbox a{
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     color: darkgray;
-    position: absolute;
-    top: 330px;
+    top: 340px;
     left: 115px;
+    text-align: center;
 }
 
 .loginbox a:hover

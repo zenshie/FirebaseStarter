@@ -1,4 +1,4 @@
-import { login } from "./app.js";
+import { login, loginGmail } from "./app.js";
 
 //----- Login code start	  
 document.getElementById("login").addEventListener("click", function() {
@@ -6,5 +6,10 @@ document.getElementById("login").addEventListener("click", function() {
     var password = document.getElementById("login_password").value;
 
     login(email, password);
+});
+
+
+document.getElementById("loginGmail").addEventListener("click",(e) => {
+    loginGmail();
 });
 //----- End

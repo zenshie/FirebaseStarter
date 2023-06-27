@@ -13,13 +13,21 @@
     <div class="loginbox">
     <img src="images/icon.png"class="avatar">
         <h1>Login Here!</h1>
-        <form method="post" action="connect.php">
-            <p>User ID</p>
-            <input type="text" name="username" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password">
-            <input type="submit" name="" value="Login">
-            <a href="signup.html">New User?</a>
+        <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data" >
+            <div class="inputBox">     
+              <input type="text" name="login_email" id="login_email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="inputBox">
+              <input type="password" name="login_password" id="login_password" class="form-control"  placeholder="Enter your password">
+            </div>
+            <div class="inputBox">
+              <button type="button" id="login" name="login" class="btn btn-success">Login</button>
+            </div>
+            <div class="inputBox">
+              <p class="or">OR</p>
+              <button type="button" id="loginGmail" class="btn btn-success">Login with Gmail</button>
+            </div>
+            <p class="forget">No account yet ? <a href="signup.html">Register</a></p>
         </form>
     </div>
 
