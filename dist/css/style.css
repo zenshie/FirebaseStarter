@@ -238,3 +238,36 @@ div.desc {
     text-align: center;
 }
 
+.data{
+    font-size: 30px;
+    padding: 20px;
+    text-align: right;
+}
+
+.DataSet{
+    margin-right: 5%;
+    margin-left: 85%;
+}
+
+.data a{
+    color: #fff;
+    padding: 8px;
+    border:1px solid white;
+    margin: 1%;
+    background-color: black;
+    cursor: pointer;
+}
+
+/*
+button{
+    color: #fbfcfd;
+    padding: 12px 40px;
+    margin-top: 3%;
+    margin-right: 3%;
+    background: black;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    float: right;
+}*/

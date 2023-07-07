@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Covid Evaluation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+    <script defer src="./bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://kit.fontawesome.com/edf086d819.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap theme -->
+</head>
+<body>
+    <!-- <section> -->
+        <div class="menu">
+                <div class="homepage">
+                <a href="homepage.html">Homepage</a>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <center>
+                    <form>
+                        <h2>Add Data</h2>
+                        <p>ISO Code:</p>
+                        <input type='text' name='iso_code' id='iso_code' data-key='iso_code' class='user-input' required><br><br>
+                        <p>Location:</p>
+                        <input type='text' name='location' id='location' data-key='location' class='user-input' required><br><br>
+                        <p>Date:</p>
+                        <input type='date' name='date' id='date' data-key='date' class='user-input' required><br><br> 
+                        <p>New Case:</p>
+                        <input type='number' name='new_case' id='new_case' data-key='new_case' class='user-input' required><br><br> 
+                        <p>New Death:</p>
+                        <input type='number' name='new_death' id='new_death' data-key='new_death' class='user-input' required><br><br>
+                        <button type="button" id="submitData" name="submitData">Add</button>
+                    </form>
+                </center>                
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div class="table-data">
+                    <!-- //<div class="table-responsive" data-pattern="priority-columns"> -->
+                        <table class="table table-dark">
+                            <caption class="text-center">Covid Evaluation Result</caption>
+                            <thead>
+                                <th style="display: none;"></th>
+                                <th>ISO Code</th>
+                                <th>Location</th>
+                                <th>Date</th>
+                                <th>New Case</th>
+                                <th>New Death</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody id="tbody1"></tbody>
+                        </table>
+                    <div class="button">
+                        <button class="button" name="logtou" id="logout">Logout</button>
+                    </div>
+                    <!-- //</div> -->
+                </div>  
+            </div>
+          </div>
+          </div>         
+          
+    <!-- SCRIPTS -->
+    <script src="./app.js" type="module"></script>
+    <script src="./logout.js" type="module"></script>
+    <script type="module">
+        import { GetAllDataRealtime, addDataBtnClicked } from "./app.js";
+        GetAllDataRealtime();
+
+        const addBtnUI = document.getElementById("submitData"); 
+        addBtnUI.addEventListener("click", function() {
+            var iso_code = document.getElementById('iso_code').value;
+            var location = document.getElementById('location').value;
+            var date = document.getElementById('date').value;
+            var new_case = document.getElementById('new_case').value;
+            var new_death = document.getElementById('new_death').value;
+
+                
+            addDataBtnClicked(iso_code,location,date,new_case,new_death);
+        });
+
+
+    </script>
+</body>
+</html> 
